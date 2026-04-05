@@ -51,6 +51,30 @@ website-agent loop \
   --max-steps 3
 ```
 
+### Automatic Codex mode
+
+If `codex` is installed on the machine, switch the project profile executor to:
+
+```json
+{
+  "mode": "shell",
+  "preset": "codex-exec",
+  "sandbox_mode": "workspace-write",
+  "skip_git_repo_check": true
+}
+```
+
+Then run:
+
+```bash
+website-agent loop \
+  --profile agent-data/profiles/demo-site.project_profile.json \
+  --state agent-data/states/demo-site.project_state.json \
+  --queue agent-data/queues/demo-site.workflow_queue.json \
+  --executor shell \
+  --max-steps 1
+```
+
 ### Manual handoff mode
 
 ```bash

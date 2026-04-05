@@ -21,6 +21,11 @@ It now includes a real runtime loop that can:
 - persist memory, checkpoints, and run records
 - work in manual, mock, or shell-executor mode
 
+Shell executor presets currently include:
+
+- `codex-exec` for structured `codex exec` runs
+- `claude-code` as a configurable bridge wrapper
+
 ## Repo Layout
 
 - marketplace metadata:

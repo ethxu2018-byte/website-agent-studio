@@ -44,6 +44,49 @@ The runtime shells out to an external command template. The executor can read th
 - write JSON to the designated response file
 - or print strict JSON to stdout
 
+Website Agent Studio also supports named shell presets through `agent_runtime.executor.preset`.
+
+#### `codex-exec`
+
+Tested on this repository. The runtime can shell out to `codex exec` with:
+
+- structured JSON schema output
+- prompt packet passed from the runtime
+- response written back to the runtime response file
+
+Example project profile fragment:
+
+```json
+{
+  "agent_runtime": {
+    "runtime_root": ".website-agent",
+    "executor": {
+      "mode": "shell",
+      "preset": "codex-exec",
+      "sandbox_mode": "workspace-write",
+      "skip_git_repo_check": true
+    }
+  }
+}
+```
+
+#### `claude-code`
+
+Claude Code support is provided through a bridge wrapper. Because Claude Code installations vary, you supply a command template:
+
+```json
+{
+  "agent_runtime": {
+    "runtime_root": ".website-agent",
+    "executor": {
+      "mode": "shell",
+      "preset": "claude-code",
+      "command_template": "claude --print --output json --cd {project_root} < {prompt_file} > {response_file}"
+    }
+  }
+}
+```
+
 Supported placeholders inside `command_template`:
 
 - `{prompt_file}`
@@ -52,6 +95,8 @@ Supported placeholders inside `command_template`:
 - `{task_id}`
 - `{run_id}`
 - `{timestamp}`
+- `{project_root}`
+- `{plugin_root}`
 
 ## Durable Memory
 

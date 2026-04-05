@@ -45,6 +45,28 @@ Recommended loop:
 3. Claude Code writes strict JSON response
 4. runtime applies the response and advances queue/state
 
+## Claude Code Shell Adapter
+
+If your Claude Code installation supports non-interactive command execution, configure:
+
+```json
+{
+  "agent_runtime": {
+    "executor": {
+      "mode": "shell",
+      "preset": "claude-code",
+      "command_template": "claude --print --output json --cd {project_root} < {prompt_file} > {response_file}"
+    }
+  }
+}
+```
+
+The wrapper script is:
+
+- `plugins/website-agent-studio/scripts/run_claude_code.py`
+
+This lets the runtime stay platform-agnostic while Claude Code remains replaceable.
+
 ## Typical Workflow
 
 1. Read `state-sync`

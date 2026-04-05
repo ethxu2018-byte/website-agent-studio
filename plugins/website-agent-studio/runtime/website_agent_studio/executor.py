@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shlex
 import subprocess
 from dataclasses import dataclass
@@ -15,6 +16,7 @@ from .storage import utc_now
 
 @dataclass
 class ExecutionContext:
+    plugin_root: Path
     project_profile: dict[str, Any]
     project_state: dict[str, Any]
     workflow_queue: list[dict[str, Any]]
@@ -33,6 +35,16 @@ class ExecutionOutcome:
     stderr: str = ""
     prompt_path: Path | None = None
     response_path: Path | None = None
+
+
+def _project_root(context: ExecutionContext) -> Path:
+    codebase = Path(context.project_profile.get("codebase_path", "")).expanduser()
+    workspace = Path(context.project_profile.get("workspace_root", "")).expanduser()
+    if codebase.exists():
+        return codebase.resolve()
+    if workspace.exists():
+        return workspace.resolve()
+    return context.prompt_path.parent.parent.parent.resolve()
 
 
 def build_prompt_bundle(context: ExecutionContext) -> str:
@@ -106,6 +118,10 @@ def build_prompt_bundle(context: ExecutionContext) -> str:
             "## Response Contract",
             "",
             "Return strict JSON only. Do not wrap it in markdown.",
+            "Do not include any prose before or after the JSON object.",
+            "quality_gates must be a JSON object mapping gate names to booleans.",
+            "queue_updates must be an array of objects with id and status.",
+            "artifacts must be an array of objects with path and description.",
             "",
             json.dumps(
                 {
@@ -225,6 +241,8 @@ def execute_shell(context: ExecutionContext, command_template: list[str] | str, 
         "task_id": context.task["id"],
         "run_id": context.run_id,
         "timestamp": utc_now(),
+        "project_root": str(_project_root(context)),
+        "plugin_root": str(context.plugin_root),
     }
 
     if isinstance(command_template, str):
@@ -258,3 +276,46 @@ def execute_shell(context: ExecutionContext, command_template: list[str] | str, 
         prompt_path=context.prompt_path,
         response_path=context.response_path,
     )
+
+
+def resolve_executor(command_template: list[str] | str, response_mode: str, executor_config: dict[str, Any], context: ExecutionContext) -> tuple[list[str] | str, str]:
+    preset = executor_config.get("preset", "")
+    if preset == "codex-exec":
+        script_path = context.plugin_root / "scripts" / "run_codex_exec.py"
+        command = [
+            "python3",
+            str(script_path),
+            "--prompt-file",
+            "{prompt_file}",
+            "--response-file",
+            "{response_file}",
+            "--project-root",
+            "{project_root}",
+            "--plugin-root",
+            "{plugin_root}",
+            "--sandbox-mode",
+            executor_config.get("sandbox_mode", "workspace-write"),
+        ]
+        if executor_config.get("model"):
+            command.extend(["--model", executor_config["model"]])
+        if executor_config.get("skip_git_repo_check", True):
+            command.append("--skip-git-repo-check")
+        return command, "file"
+
+    if preset == "claude-code":
+        script_path = context.plugin_root / "scripts" / "run_claude_code.py"
+        command = [
+            "python3",
+            str(script_path),
+            "--prompt-file",
+            "{prompt_file}",
+            "--response-file",
+            "{response_file}",
+            "--project-root",
+            "{project_root}",
+        ]
+        if executor_config.get("command_template"):
+            command.extend(["--command-template", executor_config["command_template"]])
+        return command, "file"
+
+    return command_template, response_mode

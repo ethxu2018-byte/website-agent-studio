@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .constants import PHASE_ORDER, PRIORITY_ORDER
-from .executor import ExecutionContext, ExecutionOutcome, execute_manual, execute_mock, execute_shell, validate_response
+from .executor import ExecutionContext, ExecutionOutcome, execute_manual, execute_mock, execute_shell, resolve_executor, validate_response
 from .memory import append_decision, append_journal, update_run_record, write_checkpoint, write_run_record
 from .paths import RuntimePaths, common_fallback_root, resolve_runtime_paths
 from .registry import SkillDefinition, load_skill_registry
@@ -291,6 +291,7 @@ def run_cycle(context: EngineContext, executor_override: str | None = None) -> d
     run_id, prompt_path, response_path = _start_task(context, task)
     skill = context.skill_registry[task["phase"]]
     exec_context = ExecutionContext(
+        plugin_root=context.plugin_root,
         project_profile=context.profile,
         project_state=context.state,
         workflow_queue=context.queue,
@@ -332,10 +333,16 @@ def run_cycle(context: EngineContext, executor_override: str | None = None) -> d
     if mode == "mock":
         outcome = execute_mock(exec_context)
     else:
-        outcome = execute_shell(
-            exec_context,
+        command_template, response_mode = resolve_executor(
             executor_config.get("command_template", []),
             executor_config.get("response_mode", "file"),
+            executor_config,
+            exec_context,
+        )
+        outcome = execute_shell(
+            exec_context,
+            command_template,
+            response_mode,
         )
 
     _apply_response(context, task, run_id, outcome.response or {})
