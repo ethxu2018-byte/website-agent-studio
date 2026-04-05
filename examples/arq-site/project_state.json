@@ -1,15 +1,28 @@
 {
   "project_id": "arq-site",
   "current_phase": "backend-integrations",
+  "phase_status": {
+    "state-sync": "completed",
+    "project-brief": "completed",
+    "requirements-ia": "completed",
+    "brand-assets": "completed",
+    "frontend-build": "completed",
+    "backend-integrations": "in_progress",
+    "qa-release": "pending",
+    "handoff-continuity": "pending"
+  },
   "active_skill": "backend-integrations",
+  "last_completed_phase": "frontend-build",
   "blockers": [
     "Verified sender domain is not yet configured for full commercial email delivery."
   ],
+  "open_decisions": [],
   "next_actions": [
     "Finish verified sender domain setup.",
     "Add analytics or observability instrumentation.",
     "Add end-to-end browser verification to CI."
   ],
+  "notes": "ARQ site is public and stable, but still using demo email mode.",
   "quality_gates": {
     "lint": true,
     "typecheck": true,
@@ -17,6 +30,22 @@
     "build": true,
     "browser-verification": true,
     "health-check": true
+  },
+  "runtime": {
+    "active_run_id": "",
+    "active_task_id": "",
+    "active_prompt_path": "",
+    "active_response_path": "",
+    "last_run_id": "",
+    "last_run_status": "",
+    "resume_required": false,
+    "consecutive_failures": 0,
+    "last_checkpoint_path": "",
+    "last_journal_path": "",
+    "memory_summary": ""
+  },
+  "links": {
+    "production": "https://arq-site-amber.vercel.app",
+    "health": "https://arq-site-amber.vercel.app/api/health"
   }
 }
-

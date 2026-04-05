@@ -1,6 +1,6 @@
 # Publishing Notes
 
-This repo is structured to be publishable to GitHub and usable as a Codex-compatible local marketplace plugin.
+This repo is structured to be publishable to GitHub, installable as a Python CLI, and usable as a Codex-compatible local marketplace plugin.
 
 ## Before Publishing
 
@@ -17,11 +17,21 @@ Recommended updates:
 
 ## GitHub Publish Flow
 
-1. Create a new repository on GitHub.
-2. Initialize git in the repo root if needed.
+1. Validate the plugin structure.
+2. Run runtime tests.
 3. Commit the repo.
 4. Push to GitHub.
-5. Update `plugin.json` repository and homepage fields.
+5. Tag a release.
+6. Update `plugin.json` screenshots if desired.
+
+Suggested pre-release checks:
+
+```bash
+python3 plugins/website-agent-studio/scripts/validate_plugin.py \
+  --plugin-root plugins/website-agent-studio
+
+python3 -m unittest discover -s tests
+```
 
 ## Marketplace-Oriented Structure
 
@@ -43,3 +53,5 @@ For agents that do not support Codex plugin manifests directly, use:
 See:
 
 - `docs/claude-code.md`
+- `docs/runtime.md`
+- `docs/quickstart.md`

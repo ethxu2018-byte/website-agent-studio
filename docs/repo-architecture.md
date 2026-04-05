@@ -14,6 +14,10 @@ This repository is organized as a portable agent product, not just a local notes
   - installation and publishing notes
 - `examples`
   - reusable example project states
+- `tests`
+  - runtime smoke tests
+- `pyproject.toml`
+  - Python CLI packaging entrypoint
 
 ## Plugin Internals
 
@@ -29,6 +33,17 @@ UI-facing metadata for supported surfaces that read this interface file.
 
 The phased website workflow skills.
 
+### `runtime/website_agent_studio`
+
+The actual agent runtime package:
+
+- CLI
+- state loading and normalization
+- skill registry
+- task selection
+- execution adapters
+- memory and checkpoint persistence
+
 ### `templates/`
 
 Project scaffolds for:
@@ -37,6 +52,7 @@ Project scaffolds for:
 - project state
 - workflow queue
 - orchestrator
+- agent response contract
 
 ### `references/`
 
@@ -49,5 +65,5 @@ Small deterministic helpers for:
 - creating a project scaffold
 - reading the next task
 - updating task status
+- running the runtime wrapper
 - validating the plugin structure
-

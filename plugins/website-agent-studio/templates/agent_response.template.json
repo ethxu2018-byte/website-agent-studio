@@ -1,0 +1,32 @@
+{
+  "task_id": "task-001",
+  "status": "completed",
+  "summary": "Short paragraph describing what changed or why work is blocked.",
+  "notes": [
+    "Short supporting note."
+  ],
+  "blockers": [],
+  "open_decisions": [],
+  "next_actions": [
+    "Follow-up action."
+  ],
+  "quality_gates": {
+    "lint": false,
+    "typecheck": false,
+    "test": false,
+    "build": false,
+    "browser-verification": false
+  },
+  "queue_updates": [
+    {
+      "id": "task-001",
+      "status": "completed"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "path/to/file",
+      "description": "What this artifact is."
+    }
+  ]
+}

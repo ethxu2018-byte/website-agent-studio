@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "website-agent-studio"
+version = "0.2.0"
+description = "Portable website workflow agent runtime and plugin scaffolding."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Ethan Xu", email = "ethxu2018@gmail.com" }
+]
+dependencies = []
+
+[project.scripts]
+website-agent = "website_agent_studio.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "plugins/website-agent-studio/runtime" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["plugins/website-agent-studio/runtime"]

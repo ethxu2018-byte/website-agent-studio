@@ -10,9 +10,16 @@ from pathlib import Path
 REQUIRED = [
     ".codex-plugin/plugin.json",
     "agents/openai.yaml",
+    "runtime/website_agent_studio/__init__.py",
+    "runtime/website_agent_studio/cli.py",
+    "runtime/website_agent_studio/engine.py",
+    "runtime/website_agent_studio/executor.py",
+    "runtime/website_agent_studio/storage.py",
     "templates/project_profile.template.json",
     "templates/project_state.template.json",
     "templates/workflow_queue.template.json",
+    "templates/agent_response.template.json",
+    "scripts/agent_runtime.py",
     "scripts/init_project.py",
     "scripts/next_task.py",
     "skills/state-sync/SKILL.md",
@@ -46,4 +53,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

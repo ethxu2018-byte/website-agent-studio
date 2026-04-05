@@ -7,6 +7,7 @@ Claude Code will not consume the Codex plugin manifest directly, but it can stil
 1. Point Claude Code at this repository.
 2. Tell it to read:
    - plugin README
+   - `docs/runtime.md`
    - templates
    - relevant phase skills
 3. Tell it which project it should operate on.
@@ -17,6 +18,13 @@ Claude Code will not consume the Codex plugin manifest directly, but it can stil
 Use Website Agent Studio as the workflow contract for this website project. Start with state-sync, then select the correct next phase based on the project profile, project state, and workflow queue.
 ```
 
+If you want Claude Code to behave more like a runtime-driven agent, have it follow this sequence:
+
+1. read the project profile, project state, and workflow queue
+2. read the next phase skill
+3. produce strict JSON matching `templates/agent_response.template.json`
+4. let the runtime apply that response
+
 ## Required Inputs
 
 Claude Code should be given:
@@ -26,6 +34,17 @@ Claude Code should be given:
 - a workflow queue
 - the actual codebase path
 
+## Runtime-Assisted Flow
+
+Website Agent Studio can prepare prompt packets and response files for Claude Code through `website-agent run --executor manual`.
+
+Recommended loop:
+
+1. runtime writes prompt packet
+2. Claude Code executes the task
+3. Claude Code writes strict JSON response
+4. runtime applies the response and advances queue/state
+
 ## Typical Workflow
 
 1. Read `state-sync`
@@ -33,4 +52,3 @@ Claude Code should be given:
 3. Read that phase skill
 4. Operate on the real website project
 5. Update the state and queue
-

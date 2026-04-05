@@ -1,5 +1,25 @@
 # Installing Website Agent Studio
 
+## As a Python CLI
+
+1. Clone the repository.
+2. Install editable mode:
+
+```bash
+python3 -m pip install -e .
+```
+
+3. Verify:
+
+```bash
+website-agent --help
+```
+
+4. Start with:
+
+- `docs/quickstart.md`
+- `docs/runtime.md`
+
 ## As a Local Codex Plugin
 
 1. Clone or copy this repository onto the target machine.
@@ -31,6 +51,8 @@ Key paths:
   - `plugins/website-agent-studio/skills`
 - scripts:
   - `plugins/website-agent-studio/scripts`
+- runtime:
+  - `plugins/website-agent-studio/runtime/website_agent_studio`
 - docs:
   - `docs`
 
@@ -39,3 +61,4 @@ Key paths:
 See:
 
 - `docs/claude-code.md`
+- `docs/quickstart.md`

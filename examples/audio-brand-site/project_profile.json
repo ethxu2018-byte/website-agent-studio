@@ -28,6 +28,20 @@
   "stack": [
     "Next.js",
     "TypeScript"
-  ]
+  ],
+  "quality_gates": [
+    "lint",
+    "typecheck",
+    "test",
+    "build",
+    "browser-verification"
+  ],
+  "agent_runtime": {
+    "runtime_root": ".website-agent",
+    "executor": {
+      "mode": "mock",
+      "command_template": [],
+      "response_mode": "file"
+    }
+  }
 }
-

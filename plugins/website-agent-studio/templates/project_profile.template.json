@@ -45,6 +45,13 @@
     "test",
     "build",
     "browser-verification"
-  ]
+  ],
+  "agent_runtime": {
+    "runtime_root": ".website-agent",
+    "executor": {
+      "mode": "manual",
+      "command_template": [],
+      "response_mode": "file"
+    }
+  }
 }
-

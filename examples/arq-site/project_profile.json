@@ -23,8 +23,8 @@
     "premium",
     "warm gray-white"
   ],
-  "workspace_root": "/Users/ethan/Documents/robweb",
-  "codebase_path": "/Users/ethan/Documents/robweb/arq-site",
+  "workspace_root": "/path/to/robweb",
+  "codebase_path": "/path/to/robweb/arq-site",
   "live_urls": {
     "production": "https://arq-site-amber.vercel.app",
     "health": "https://arq-site-amber.vercel.app/api/health"
@@ -34,6 +34,21 @@
     "TypeScript",
     "Vercel",
     "Resend"
-  ]
+  ],
+  "quality_gates": [
+    "lint",
+    "typecheck",
+    "test",
+    "build",
+    "browser-verification",
+    "health-check"
+  ],
+  "agent_runtime": {
+    "runtime_root": ".website-agent",
+    "executor": {
+      "mode": "manual",
+      "command_template": [],
+      "response_mode": "file"
+    }
+  }
 }
-

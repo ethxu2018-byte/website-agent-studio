@@ -5,7 +5,13 @@
     "phase": "backend-integrations",
     "owner_skill": "backend-integrations",
     "priority": "P0",
-    "status": "open"
+    "status": "open",
+    "depends_on": [],
+    "attempts": 0,
+    "blocked_reason": "",
+    "summary": "",
+    "artifacts": [],
+    "history": []
   },
   {
     "id": "arq-002",
@@ -13,7 +19,14 @@
     "phase": "backend-integrations",
     "owner_skill": "backend-integrations",
     "priority": "P1",
-    "status": "open"
+    "status": "open",
+    "depends_on": [
+      "arq-001"
+    ],
+    "attempts": 0,
+    "blocked_reason": "",
+    "summary": "",
+    "artifacts": [],
+    "history": []
   }
 ]
-

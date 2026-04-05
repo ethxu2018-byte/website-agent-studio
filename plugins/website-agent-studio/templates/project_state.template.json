@@ -25,10 +25,22 @@
     "build": false,
     "browser-verification": false
   },
+  "runtime": {
+    "active_run_id": "",
+    "active_task_id": "",
+    "active_prompt_path": "",
+    "active_response_path": "",
+    "last_run_id": "",
+    "last_run_status": "",
+    "resume_required": false,
+    "consecutive_failures": 0,
+    "last_checkpoint_path": "",
+    "last_journal_path": "",
+    "memory_summary": ""
+  },
   "links": {
     "production": "",
     "health": ""
   },
   "notes": "Update after each meaningful phase action."
 }
-

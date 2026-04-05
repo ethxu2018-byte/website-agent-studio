@@ -1,19 +1,48 @@
 {
   "project_id": "audio-brand-site",
   "current_phase": "requirements-ia",
+  "phase_status": {
+    "state-sync": "completed",
+    "project-brief": "completed",
+    "requirements-ia": "in_progress",
+    "brand-assets": "pending",
+    "frontend-build": "pending",
+    "backend-integrations": "pending",
+    "qa-release": "pending",
+    "handoff-continuity": "pending"
+  },
   "active_skill": "requirements-ia",
+  "last_completed_phase": "project-brief",
   "blockers": [],
+  "open_decisions": [],
   "next_actions": [
     "Write sitemap.",
     "Write consumer CTA flow.",
     "Define product feature module order."
   ],
+  "notes": "Consumer audio site is ready to move from brief into concrete IA.",
   "quality_gates": {
     "lint": false,
     "typecheck": false,
     "test": false,
     "build": false,
     "browser-verification": false
+  },
+  "runtime": {
+    "active_run_id": "",
+    "active_task_id": "",
+    "active_prompt_path": "",
+    "active_response_path": "",
+    "last_run_id": "",
+    "last_run_status": "",
+    "resume_required": false,
+    "consecutive_failures": 0,
+    "last_checkpoint_path": "",
+    "last_journal_path": "",
+    "memory_summary": ""
+  },
+  "links": {
+    "production": "",
+    "health": ""
   }
 }
-

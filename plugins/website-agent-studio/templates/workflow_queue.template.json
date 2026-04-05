@@ -7,10 +7,14 @@
     "priority": "P0",
     "status": "open",
     "depends_on": [],
+    "attempts": 0,
+    "blocked_reason": "",
+    "summary": "",
+    "artifacts": [],
+    "history": [],
     "outputs": [
       "Validated profile",
       "Validated state"
     ]
   }
 ]
-

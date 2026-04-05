@@ -1,7 +1,7 @@
 {
   "name": "website-agent-studio",
-  "version": "0.1.0",
-  "description": "Portable website workflow plugin with phase skills, state templates, and release scaffolds for building industrial-grade sites.",
+  "version": "0.2.0",
+  "description": "Portable website workflow agent runtime with phase skills, state templates, queue orchestration, and recovery scaffolds for industrial-grade sites.",
   "author": {
     "name": "Ethan Xu",
     "url": "https://github.com/ethxu2018-byte"
@@ -23,8 +23,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Website Agent Studio",
-    "shortDescription": "Build and run website projects as a multi-phase agent workflow",
-    "longDescription": "Website Agent Studio packages reusable website delivery skills, state templates, queue templates, and orchestration guidance so an agent can run strategy, IA, design, engineering, QA, and continuity work in a controlled sequence.",
+    "shortDescription": "Build and run website projects as a stateful multi-phase agent",
+    "longDescription": "Website Agent Studio packages reusable website delivery skills, a real runtime loop, state templates, queue templates, memory files, and orchestration guidance so an agent can run strategy, IA, design, engineering, QA, and continuity work in a controlled sequence.",
     "developerName": "Ethan Xu",
     "category": "Coding",
     "capabilities": ["Interactive", "Write"],

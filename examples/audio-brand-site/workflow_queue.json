@@ -5,7 +5,13 @@
     "phase": "requirements-ia",
     "owner_skill": "requirements-ia",
     "priority": "P0",
-    "status": "open"
+    "status": "open",
+    "depends_on": [],
+    "attempts": 0,
+    "blocked_reason": "",
+    "summary": "",
+    "artifacts": [],
+    "history": []
   },
   {
     "id": "audio-002",
@@ -13,7 +19,14 @@
     "phase": "brand-assets",
     "owner_skill": "brand-assets",
     "priority": "P1",
-    "status": "open"
+    "status": "open",
+    "depends_on": [
+      "audio-001"
+    ],
+    "attempts": 0,
+    "blocked_reason": "",
+    "summary": "",
+    "artifacts": [],
+    "history": []
   }
 ]
-
