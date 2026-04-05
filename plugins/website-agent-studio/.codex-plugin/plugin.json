@@ -4,10 +4,10 @@
   "description": "Portable website workflow plugin with phase skills, state templates, and release scaffolds for building industrial-grade sites.",
   "author": {
     "name": "Ethan Xu",
-    "url": "[TODO: set-author-url]"
+    "url": "https://github.com/ethxu2018-byte"
   },
-  "homepage": "[TODO: set-homepage-url]",
-  "repository": "[TODO: set-github-repository-url]",
+  "homepage": "https://github.com/ethxu2018-byte/website-agent-studio",
+  "repository": "https://github.com/ethxu2018-byte/website-agent-studio",
   "license": "MIT",
   "keywords": [
     "website",
@@ -28,9 +28,9 @@
     "developerName": "Ethan Xu",
     "category": "Coding",
     "capabilities": ["Interactive", "Write"],
-    "websiteURL": "[TODO: set-homepage-url]",
-    "privacyPolicyURL": "[TODO: set-privacy-policy-url]",
-    "termsOfServiceURL": "[TODO: set-terms-url]",
+    "websiteURL": "https://github.com/ethxu2018-byte/website-agent-studio",
+    "privacyPolicyURL": "https://github.com/ethxu2018-byte/website-agent-studio/blob/main/docs/privacy-policy.md",
+    "termsOfServiceURL": "https://github.com/ethxu2018-byte/website-agent-studio/blob/main/docs/terms-of-use.md",
     "defaultPrompt": [
       "Set up a website project workflow from brief to release",
       "Audit this website project and tell me the active phase",
@@ -41,4 +41,3 @@
     "screenshots": []
   }
 }
-
