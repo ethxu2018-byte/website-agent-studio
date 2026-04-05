@@ -38,5 +38,4 @@ Key paths:
 
 See:
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/claude-code.md`
-
+- `docs/claude-code.md`

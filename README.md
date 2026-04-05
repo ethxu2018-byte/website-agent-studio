@@ -15,15 +15,15 @@ It is designed to help an agent build or continue a website project through:
 ## Repo Layout
 
 - marketplace metadata:
-  - `/Users/ethan/Documents/robweb/website-agent-studio/.agents/plugins/marketplace.json`
+  - `.agents/plugins/marketplace.json`
 - plugin:
-  - `/Users/ethan/Documents/robweb/website-agent-studio/plugins/website-agent-studio`
+  - `plugins/website-agent-studio`
 - docs:
-  - `/Users/ethan/Documents/robweb/website-agent-studio/docs`
+  - `docs`
 
 ## Plugin Path
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/plugins/website-agent-studio`
+- `plugins/website-agent-studio`
 
 ## What It Includes
 
@@ -60,17 +60,17 @@ Use the templates, docs, and skill files as the workflow contract.
 
 See:
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/claude-code.md`
+- `docs/claude-code.md`
 
 ## Publishing
 
 See:
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/publishing.md`
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/installing.md`
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/repo-architecture.md`
+- `docs/publishing.md`
+- `docs/installing.md`
+- `docs/repo-architecture.md`
 
 ## Examples
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/examples/arq-site`
-- `/Users/ethan/Documents/robweb/website-agent-studio/examples/audio-brand-site`
+- `examples/arq-site`
+- `examples/audio-brand-site`

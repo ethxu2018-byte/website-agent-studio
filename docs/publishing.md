@@ -6,7 +6,7 @@ This repo is structured to be publishable to GitHub and usable as a Codex-compat
 
 Update these fields in:
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/plugins/website-agent-studio/.codex-plugin/plugin.json`
+- `plugins/website-agent-studio/.codex-plugin/plugin.json`
 
 Recommended updates:
 
@@ -42,5 +42,4 @@ For agents that do not support Codex plugin manifests directly, use:
 
 See:
 
-- `/Users/ethan/Documents/robweb/website-agent-studio/docs/claude-code.md`
-
+- `docs/claude-code.md`
