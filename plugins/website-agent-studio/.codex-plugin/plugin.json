@@ -1,0 +1,44 @@
+{
+  "name": "website-agent-studio",
+  "version": "0.1.0",
+  "description": "Portable website workflow plugin with phase skills, state templates, and release scaffolds for building industrial-grade sites.",
+  "author": {
+    "name": "Ethan Xu",
+    "url": "[TODO: set-author-url]"
+  },
+  "homepage": "[TODO: set-homepage-url]",
+  "repository": "[TODO: set-github-repository-url]",
+  "license": "MIT",
+  "keywords": [
+    "website",
+    "agent",
+    "workflow",
+    "frontend",
+    "backend",
+    "design-system",
+    "qa",
+    "release",
+    "handoff"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Website Agent Studio",
+    "shortDescription": "Build and run website projects as a multi-phase agent workflow",
+    "longDescription": "Website Agent Studio packages reusable website delivery skills, state templates, queue templates, and orchestration guidance so an agent can run strategy, IA, design, engineering, QA, and continuity work in a controlled sequence.",
+    "developerName": "Ethan Xu",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "[TODO: set-homepage-url]",
+    "privacyPolicyURL": "[TODO: set-privacy-policy-url]",
+    "termsOfServiceURL": "[TODO: set-terms-url]",
+    "defaultPrompt": [
+      "Set up a website project workflow from brief to release",
+      "Audit this website project and tell me the active phase",
+      "Create the next queue item and state update for this web project"
+    ],
+    "composerIcon": "./assets/website-agent-icon.svg",
+    "logo": "./assets/website-agent-icon.svg",
+    "screenshots": []
+  }
+}
+

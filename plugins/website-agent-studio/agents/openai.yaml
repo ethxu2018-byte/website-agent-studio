@@ -1,0 +1,7 @@
+interface:
+  display_name: "Website Agent Studio"
+  short_description: "Run website projects through phased strategy, design, engineering, QA, and handoff workflows"
+  icon_small: "./assets/website-agent-icon.svg"
+  icon_large: "./assets/website-agent-icon.svg"
+  default_prompt: "Use Website Agent Studio to identify the current website project phase, choose the right workflow skill, and move the project forward without losing product, design, or engineering continuity."
+

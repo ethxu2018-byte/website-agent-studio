@@ -1,0 +1,39 @@
+{
+  "project_id": "arq-site",
+  "project_name": "ARQ Site",
+  "project_type": "premium-marketing-site",
+  "category": "humanoid-robotics",
+  "primary_cta": "Book a Demo",
+  "secondary_ctas": [
+    "Explore Deployment",
+    "Contact Ethan"
+  ],
+  "audience_segments": [
+    "hospitality operators",
+    "retail operators",
+    "gallery teams",
+    "public-space stakeholders",
+    "portfolio reviewers"
+  ],
+  "business_goal": "Present a premium humanoid robotics platform and generate qualified inbound interest.",
+  "brand_direction": [
+    "minimal",
+    "editorial",
+    "calm",
+    "premium",
+    "warm gray-white"
+  ],
+  "workspace_root": "/Users/ethan/Documents/robweb",
+  "codebase_path": "/Users/ethan/Documents/robweb/arq-site",
+  "live_urls": {
+    "production": "https://arq-site-amber.vercel.app",
+    "health": "https://arq-site-amber.vercel.app/api/health"
+  },
+  "stack": [
+    "Next.js",
+    "TypeScript",
+    "Vercel",
+    "Resend"
+  ]
+}
+

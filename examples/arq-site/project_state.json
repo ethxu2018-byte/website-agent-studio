@@ -1,0 +1,22 @@
+{
+  "project_id": "arq-site",
+  "current_phase": "backend-integrations",
+  "active_skill": "backend-integrations",
+  "blockers": [
+    "Verified sender domain is not yet configured for full commercial email delivery."
+  ],
+  "next_actions": [
+    "Finish verified sender domain setup.",
+    "Add analytics or observability instrumentation.",
+    "Add end-to-end browser verification to CI."
+  ],
+  "quality_gates": {
+    "lint": true,
+    "typecheck": true,
+    "test": true,
+    "build": true,
+    "browser-verification": true,
+    "health-check": true
+  }
+}
+

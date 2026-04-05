@@ -1,0 +1,33 @@
+{
+  "project_id": "audio-brand-site",
+  "project_name": "Audio Brand Site",
+  "project_type": "consumer-product-site",
+  "category": "audio-hardware",
+  "primary_cta": "Buy Now",
+  "secondary_ctas": [
+    "View Features",
+    "Compare Models"
+  ],
+  "audience_segments": [
+    "consumers",
+    "reviewers",
+    "retail partners"
+  ],
+  "business_goal": "Present a premium audio product and support conversion through a clear consumer journey.",
+  "brand_direction": [
+    "minimal",
+    "high-contrast",
+    "product-led"
+  ],
+  "workspace_root": "/path/to/workspace",
+  "codebase_path": "/path/to/audio-site",
+  "live_urls": {
+    "production": "",
+    "health": ""
+  },
+  "stack": [
+    "Next.js",
+    "TypeScript"
+  ]
+}
+

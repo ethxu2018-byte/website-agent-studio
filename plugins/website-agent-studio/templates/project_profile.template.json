@@ -1,0 +1,50 @@
+{
+  "project_id": "example-site",
+  "project_name": "Example Site",
+  "project_type": "marketing-site",
+  "category": "technology",
+  "primary_cta": "Book a Demo",
+  "secondary_ctas": [
+    "Contact",
+    "Read More"
+  ],
+  "audience_segments": [
+    "buyers",
+    "partners",
+    "press"
+  ],
+  "business_goal": "Generate qualified interest and present a strong brand narrative.",
+  "brand_direction": [
+    "minimal",
+    "premium",
+    "clear"
+  ],
+  "workspace_root": "/absolute/path/to/workspace",
+  "codebase_path": "/absolute/path/to/project",
+  "planning_paths": {
+    "management": "/absolute/path/to/project-management",
+    "strategy": "/absolute/path/to/strategy",
+    "requirements": "/absolute/path/to/requirements",
+    "brand": "/absolute/path/to/brand",
+    "assets": "/absolute/path/to/assets",
+    "engineering": "/absolute/path/to/engineering",
+    "qa": "/absolute/path/to/qa",
+    "portfolio": "/absolute/path/to/portfolio"
+  },
+  "live_urls": {
+    "production": "",
+    "health": ""
+  },
+  "stack": [
+    "Next.js",
+    "TypeScript"
+  ],
+  "quality_gates": [
+    "lint",
+    "typecheck",
+    "test",
+    "build",
+    "browser-verification"
+  ]
+}
+

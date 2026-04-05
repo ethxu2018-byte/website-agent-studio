@@ -1,0 +1,19 @@
+[
+  {
+    "id": "audio-001",
+    "title": "Write sitemap and product conversion flow",
+    "phase": "requirements-ia",
+    "owner_skill": "requirements-ia",
+    "priority": "P0",
+    "status": "open"
+  },
+  {
+    "id": "audio-002",
+    "title": "Define product asset system",
+    "phase": "brand-assets",
+    "owner_skill": "brand-assets",
+    "priority": "P1",
+    "status": "open"
+  }
+]
+

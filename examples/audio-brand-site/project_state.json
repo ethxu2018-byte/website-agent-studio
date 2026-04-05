@@ -1,0 +1,19 @@
+{
+  "project_id": "audio-brand-site",
+  "current_phase": "requirements-ia",
+  "active_skill": "requirements-ia",
+  "blockers": [],
+  "next_actions": [
+    "Write sitemap.",
+    "Write consumer CTA flow.",
+    "Define product feature module order."
+  ],
+  "quality_gates": {
+    "lint": false,
+    "typecheck": false,
+    "test": false,
+    "build": false,
+    "browser-verification": false
+  }
+}
+

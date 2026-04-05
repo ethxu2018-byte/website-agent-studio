@@ -1,0 +1,16 @@
+[
+  {
+    "id": "task-001",
+    "title": "Confirm project profile and working paths",
+    "phase": "state-sync",
+    "owner_skill": "state-sync",
+    "priority": "P0",
+    "status": "open",
+    "depends_on": [],
+    "outputs": [
+      "Validated profile",
+      "Validated state"
+    ]
+  }
+]
+

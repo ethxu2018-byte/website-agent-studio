@@ -1,0 +1,34 @@
+{
+  "project_id": "example-site",
+  "current_phase": "state-sync",
+  "phase_status": {
+    "state-sync": "in_progress",
+    "project-brief": "pending",
+    "requirements-ia": "pending",
+    "brand-assets": "pending",
+    "frontend-build": "pending",
+    "backend-integrations": "pending",
+    "qa-release": "pending",
+    "handoff-continuity": "pending"
+  },
+  "active_skill": "state-sync",
+  "last_completed_phase": "",
+  "blockers": [],
+  "open_decisions": [],
+  "next_actions": [
+    "Read profile, state, queue, and workspace folders."
+  ],
+  "quality_gates": {
+    "lint": false,
+    "typecheck": false,
+    "test": false,
+    "build": false,
+    "browser-verification": false
+  },
+  "links": {
+    "production": "",
+    "health": ""
+  },
+  "notes": "Update after each meaningful phase action."
+}
+

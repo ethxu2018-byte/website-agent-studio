@@ -1,0 +1,19 @@
+[
+  {
+    "id": "arq-001",
+    "title": "Verify sender domain and switch from demo email mode to live email mode",
+    "phase": "backend-integrations",
+    "owner_skill": "backend-integrations",
+    "priority": "P0",
+    "status": "open"
+  },
+  {
+    "id": "arq-002",
+    "title": "Add analytics and observability instrumentation",
+    "phase": "backend-integrations",
+    "owner_skill": "backend-integrations",
+    "priority": "P1",
+    "status": "open"
+  }
+]
+
