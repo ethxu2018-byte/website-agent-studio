@@ -1,2 +1,0 @@
-[console_scripts]
-website-agent = website_agent_studio.cli:main
